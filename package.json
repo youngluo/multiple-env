@@ -1,0 +1,54 @@
+{
+  "name": "multiple-env-webpack-plugin",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:youngluo/multiple-env.git",
+  "author": "Young <ly532265997@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git add -A && git-cz",
+    "prepare": "husky install",
+    "build": "rollup -c rollup.config.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "peerDependencies": {
+    "webpack": "^5.64.4"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "lodash.get": "^4.4.2",
+    "schema-utils": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/lodash.get": "^4.4.6",
+    "@types/webpack": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.4.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "rollup": "^2.60.2",
+    "typescript": "^4.4.4"
+  }
+}
